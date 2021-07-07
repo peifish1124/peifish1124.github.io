@@ -388,96 +388,28 @@
     
       
   <div class='post'>
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
-    <div>
-      <h2 id='say-something'>Say Something</h2>
-        <form id='comment-form' class='new-comment' method='POST'>
-          
-          <h3 class='reply-notice hidden'>
-            <span class='reply-name'></span>
-            <a class='reply-close-btn button'><i class='fas fa-times'></i></a>
-          </h3>
-
-          
-          <input type='hidden' name='options[entryId]' value='6354f801456983b22c4b91ce42adfca7'>
-          <input type='hidden' name='fields[replyThread]' value=''>
-          <input type='hidden' name='fields[replyID]' value=''>
-          <input type='hidden' name='fields[replyName]' value=''>
-
-          
-          <input required name='fields[name]' type='text' placeholder='Your Name'>
-          <input name='fields[website]' type='text' placeholder='Your Website'>
-          <input required name='fields[email]' type='email' placeholder='Your Email'>
-          <textarea required name='fields[body]' placeholder='Your Message' rows='10'></textarea>
-
-          
-          
-
-          
-          <div class='submit-notice'>
-            <strong class='submit-notice-text submit-success hidden'>Thanks for your comment! It will be shown on the site once it has been approved.</strong>
-            <strong class='submit-notice-text submit-failed hidden'>Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.</strong>
-          </div>
-
-          
-          <button type='button' id="comment-form-submit" class='button'>Submit</button>
-          <button type='button' id="comment-form-submitted" class='hidden button' disabled>Submitted</button>
-          <button type='reset' id="comment-form-reset" class='button'>Reset</button>
-        </form>
-    </div>
-
     
-    <div class='comments-container'>
-      <h2>Comments</h2>
-                  <article id='7f97ca70-c476-11e9-999e-498e0902dd73' class='comment' data-reply-thread='7f97ca70-c476-11e9-999e-498e0902dd73'>
-                    <header>
-                      <img class='comment-avatar circle' src='https://www.gravatar.com/avatar/?s=100' alt="Parent Poster's Gravatar">
-                      <div>
-                        <div class='comment-author-container'>
-                          <h3 class='comment-author'>Parent Poster</h3>
-                          <a class='comment-date' href='#7f97ca70-c476-11e9-999e-498e0902dd73' title='Permalink to this comment'>
-                            <time datetime='2019-08-22T00:48:04.390Z'>22 Aug 19 00:48</time>
-                          </a>
-                        </div>
-                        
-                        
-                        <a class='comment-reply-btn' href='#say-something'>Reply</a>
-                      </div>
-                    </header>
-                    <div class='comment-content'>
-                      Parent Comment
-                    </div>
-                  </article>
-                
-              
-                  <article id='a69c31b0-c476-11e9-999e-498e0902dd73' class='comment comment-reply' data-reply-thread='7f97ca70-c476-11e9-999e-498e0902dd73'>
-                    <header>
-                      <img class='comment-avatar circle' src='https://www.gravatar.com/avatar/?s=100' alt="Reply Poster's Gravatar">
-                      <div>
-                        <div class='comment-author-container'>
-                          <h3 class='comment-author'>Reply Poster</h3>
-                          <a class='comment-date' href='#a69c31b0-c476-11e9-999e-498e0902dd73' title='Permalink to this comment'>
-                            <time datetime='2019-08-22T00:49:09.436Z'>22 Aug 19 00:49</time>
-                          </a>
-                        </div>
-                        
-                        
-                        <a class='comment-reply-btn' href='#say-something'>Reply</a>
-                      </div>
-                    </header>
-                    <div class='comment-content'>
-                      Reply Comment
-                    </div>
-                  </article>
-                
-              
-            
-          
-          
-        
-      
-    </div>
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "peifish1124" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
   </div>
+
 
 
     
