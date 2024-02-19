@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pei-Yu Chen (Sophia)</title>
+        <link>https://peifish1124.github.io/</link>
+        <description>Recent content on Pei-Yu Chen (Sophia)</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Peifish</copyright>
+        <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://peifish1124.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About Me</title>
+        <link>https://peifish1124.github.io/about-me/</link>
+        <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/about-me/</guid>
+        <description>&lt;h3 id=&#34;學歷&#34;&gt;學歷&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sep 2023 – Jun 2025： 國立台灣大學 資訊工程研究所 - 網路探勘與資訊檢索實驗室&lt;/li&gt;
+&lt;li&gt;Jan 2023 - Jun 2023： 瑞典林雪平大學 交換計畫&lt;/li&gt;
+&lt;li&gt;Sep 2019 – Jun 2023： 國立台灣大學 資訊管理學系 (GPA: 4.16/4.3)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;工作經歷&#34;&gt;工作經歷&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Jul 2023 – Aug 2023：Backend Trainee @AppWorks School Campus Program&lt;/li&gt;
+&lt;li&gt;Apr 2022 – Dec 2022：Full Stack Engineer Intern @5xRuby&lt;/li&gt;
+&lt;li&gt;May 2021 – Mar 2022： Backend Engineer Intern @Beyonde, Inc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;軟體開發能力&#34;&gt;軟體開發能力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;熟悉 Nginx、Redis、Docker、GitHub Actions、CICD&lt;/li&gt;
+&lt;li&gt;曾使用過 AWS 服務：EC2、RDS、load balancer、auto-scaling&lt;/li&gt;
+&lt;li&gt;使用 Redis 設計 rate limiter 來保障網站安全&lt;/li&gt;
+&lt;li&gt;串接各種開源 API，例如 LINE messaging API、ChatGPT OpenAI、中央氣象局 API、Google Search API&lt;/li&gt;
+&lt;li&gt;多次設計資料庫、SQL Query、撰寫 API 文件、撰寫 testing&lt;/li&gt;
+&lt;li&gt;使用 scrum 敏捷開發、具 clean code 撰寫能力&lt;/li&gt;
+&lt;li&gt;ML/AI 模型建構和訓練能力&lt;/li&gt;
+&lt;li&gt;網路爬蟲能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;溝通交流軟實力&#34;&gt;溝通交流軟實力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;曾到瑞典交換生活半年，擅長與人溝通交流和面對各式挑戰&lt;/li&gt;
+&lt;li&gt;大學期間多次擔任系上活動的負責人，具有團隊合作和領導能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;技能&#34;&gt;技能&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Languages:&lt;/code&gt; Chinese (Native), English (Fluent)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Programming Language:&lt;/code&gt; C++, Python, Html, CSS, JavaScript&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Frameworks:&lt;/code&gt; React.js, Express.js, Ruby on Rails&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Databases:&lt;/code&gt; MySQL, PostgreSQL, MongoDB&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Clean Architecture:&lt;/code&gt; Separation of Concerns, Dependency Injection&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Automation Tools:&lt;/code&gt; GitHub Actions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>ChiTou</title>
+        <link>https://peifish1124.github.io/p/project-chitou/</link>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/project-chitou/</guid>
+        <description>&lt;img src="https://peifish1124.github.io/p/project-chitou/chitou-pic.png" alt="Featured image of post ChiTou" /&gt;&lt;p&gt;&lt;img src=&#34;image-1.png&#34; alt=&#34;alt text&#34; style=&#34;width: 20px; height: 20px; margin-bottom: -3px&#34;&gt; : &lt;a class=&#34;link&#34; href=&#34;https://github.com/peifish1124/ChiTou&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/peifish1124/ChiTou&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;技術架構&#34;&gt;技術架構&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Express.js、Nginx&lt;/li&gt;
+&lt;li&gt;APIs: 中央氣象局開放資料 API、LINE Bot Messaging API、Google Search API、ChatGPT OpenAI、Discord Bot API、Gmail API&lt;/li&gt;
+&lt;li&gt;Deploy: AWS EC2&lt;/li&gt;
+&lt;li&gt;Database: AWS RDS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;發想動機&#34;&gt;發想動機&lt;/h3&gt;
+&lt;p&gt;希望解決使用者在安排出遊的時候會遇到的問題：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;懶得用編輯程式、共編規劃行程&lt;/li&gt;
+&lt;li&gt;要開多個平台去整合各種資訊：用 Google docs 來紀錄、用 Google search 來查景點、用 Google map 來查景點間的距離、查詢天氣&lt;/li&gt;
+&lt;li&gt;提出了多種方案但不知道大家想選哪個行程&lt;/li&gt;
+&lt;li&gt;需要預估交通時間、停留時間&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此我們 ChiTou 的核心概念就是：整合共編、Google Search、Google Map、天氣資訊 的平台，節省使用者在安排旅行所需要的時間，並提供包含旅程所需時間的最終規劃結果&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://peifish1124.github.io/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>https://peifish1124.github.io/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://peifish1124.github.io/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/links/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://peifish1124.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Pei-Yu Chen (Sophia)</title>
+        <link>https://peifish1124.github.io/tags/</link>
+        <description>Recent content in Tags on Pei-Yu Chen (Sophia)</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Peifish</copyright>
+        <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://peifish1124.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ChatGPT OpenAI</title>
+        <link>https://peifish1124.github.io/tags/chatgpt-openai/</link>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/tags/chatgpt-openai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CICD</title>
+        <link>https://peifish1124.github.io/tags/cicd/</link>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/tags/cicd/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Google Search API</title>
+        <link>https://peifish1124.github.io/tags/google-search-api/</link>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/tags/google-search-api/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>LINE Messaging API</title>
+        <link>https://peifish1124.github.io/tags/line-messaging-api/</link>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/tags/line-messaging-api/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Weather API</title>
+        <link>https://peifish1124.github.io/tags/weather-api/</link>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/tags/weather-api/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

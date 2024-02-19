@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Pei-Yu Chen (Sophia)</title>
+        <link>https://peifish1124.github.io/post/</link>
+        <description>Recent content in Posts on Pei-Yu Chen (Sophia)</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Peifish</copyright>
+        <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://peifish1124.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ChiTou</title>
+        <link>https://peifish1124.github.io/p/project-chitou/</link>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/project-chitou/</guid>
+        <description>&lt;img src="https://peifish1124.github.io/p/project-chitou/chitou-pic.png" alt="Featured image of post ChiTou" /&gt;&lt;p&gt;&lt;img src=&#34;image-1.png&#34; alt=&#34;alt text&#34; style=&#34;width: 20px; height: 20px; margin-bottom: -3px&#34;&gt; : &lt;a class=&#34;link&#34; href=&#34;https://github.com/peifish1124/ChiTou&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/peifish1124/ChiTou&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;技術架構&#34;&gt;技術架構&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Express.js、Nginx&lt;/li&gt;
+&lt;li&gt;APIs: 中央氣象局開放資料 API、LINE Bot Messaging API、Google Search API、ChatGPT OpenAI、Discord Bot API、Gmail API&lt;/li&gt;
+&lt;li&gt;Deploy: AWS EC2&lt;/li&gt;
+&lt;li&gt;Database: AWS RDS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;發想動機&#34;&gt;發想動機&lt;/h3&gt;
+&lt;p&gt;希望解決使用者在安排出遊的時候會遇到的問題：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;懶得用編輯程式、共編規劃行程&lt;/li&gt;
+&lt;li&gt;要開多個平台去整合各種資訊：用 Google docs 來紀錄、用 Google search 來查景點、用 Google map 來查景點間的距離、查詢天氣&lt;/li&gt;
+&lt;li&gt;提出了多種方案但不知道大家想選哪個行程&lt;/li&gt;
+&lt;li&gt;需要預估交通時間、停留時間&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此我們 ChiTou 的核心概念就是：整合共編、Google Search、Google Map、天氣資訊 的平台，節省使用者在安排旅行所需要的時間，並提供包含旅程所需時間的最終規劃結果&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
