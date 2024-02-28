@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>MySQL on Pei-Yu Chen (Sophia)</title>
+        <link>https://peifish1124.github.io/tags/mysql/</link>
+        <description>Recent content in MySQL on Pei-Yu Chen (Sophia)</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Peifish</copyright>
+        <lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://peifish1124.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MySQL 基本架構和查詢流程</title>
+        <link>https://peifish1124.github.io/p/study-mysql/</link>
+        <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/study-mysql/</guid>
+        <description>&lt;p&gt;資料庫管理系統（DBMS）是一種用於建立、維護和管理資料庫的軟體工具。它允許使用者操作資料庫，因此在日常使用中，當我們談論資料庫時，通常指的就是 DBMS，例如 MySQL。&lt;/p&gt;
+&lt;h3 id=&#34;mysql-基本架構&#34;&gt;MySQL 基本架構&lt;/h3&gt;
+&lt;img src=&#34;mysql-structure.png&#34; style=&#34;width: 900px; height: 600px;&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;圖片來自：https://iter01.com/581014.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;外掛式的儲存引擎架構將查詢處理和其它的系統任務以及資料的儲存提取相分離。這種架構允許根據業務需求和實際情況選擇合適的存儲引擎。&lt;/p&gt;
+&lt;h4 id=&#34;1-連線層&#34;&gt;1. 連線層&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;通訊機制：&lt;/strong&gt; 該層包括本地 socket 通訊和大部分基於客戶端/服務端架構實現的類似於 TCP/IP 的通訊方式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;連線管理：&lt;/strong&gt; 主要負責連線處理、授權認證，以及相關的安全機制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thread Pool：&lt;/strong&gt; 引入 thread pool 的概念，為通過認證且安全接入的客戶端分配 thread。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全連接：&lt;/strong&gt; 該層可以實現基於 SSL 的安全連接。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;權限驗證：&lt;/strong&gt; 伺服器會為每個安全接入的客戶端驗證其操作權限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-服務層&#34;&gt;2. 服務層&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;主要負責執行大多數核心服務功能。&lt;/li&gt;
+&lt;li&gt;伺服器會解析查詢語句，建立內部的解析樹，並對其進行優化，例如決定查詢表的順序，判斷是否使用索引等，最終生成相應的執行計劃。&lt;/li&gt;
+&lt;li&gt;所有跨儲存引擎的功能也在這一層實現。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;SQL 接口(SQL interface)：負責接收使用者的 SQL 指令並返回所需的查詢結果。&lt;/li&gt;
+&lt;li&gt;解析器(Parser)：負責驗證和解析傳遞到解析器的 SQL 指令。&lt;/li&gt;
+&lt;li&gt;優化器(Optimizer)：在查詢執行前，使用查詢優化器對 SQL 語句進行優化，如根據 where 條件決定執行順序，例如先進行過濾還是先進行投影。&lt;/li&gt;
+&lt;li&gt;快取與緩衝區(Caches &amp;amp; Buffers)：
+&lt;ul&gt;
+&lt;li&gt;如果查詢快取中有匹配的結果，查詢語句可以直接從查詢快取中獲取數據。&lt;/li&gt;
+&lt;li&gt;這種快取機制由多個小型快取組成，例如表快取、記錄快取、鍵快取、權限快取等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;3-儲存引擎層&#34;&gt;3. 儲存引擎層&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;負責 MySQL 中數據的存儲和檢索，伺服器透過 API 與存儲引擎進行交互。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4-資料儲存層&#34;&gt;4. 資料儲存層&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;主要將數據存儲在裸設備上運行的文件系統中，並實現與存儲引擎的互動。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mysql-查詢流程&#34;&gt;MySQL 查詢流程&lt;/h3&gt;
+&lt;img src=&#34;mysql-search.png&#34; style=&#34;width: 900px; height: 600px;&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;圖片來自：https://iter01.com/581014.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;客戶端向 MySQL 伺服器發送查詢請求，經過進入 thread pool、授權檢查和分配 thread 的過程。&lt;/li&gt;
+&lt;li&gt;伺服器首先檢查查詢快取，如果命中快取，則直接返回快取中的結果（同時進行權限檢查）。如果沒有命中快取，則進入下一階段。&lt;/li&gt;
+&lt;li&gt;伺服器對 SQL 進行解析和預處理（包括處理解析器無法解決的語義問題和權限檢查），然後由優化器生成相應的執行計劃。&lt;/li&gt;
+&lt;li&gt;MySQL 根據執行計劃，調用存儲引擎的 API 來執行查詢。&lt;/li&gt;
+&lt;li&gt;將查詢結果返回給客戶端，並將查詢結果存入快取。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;參考文章&#34;&gt;參考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://iter01.com/581014.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MySQL 的架構&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/annsshadow/p/5037667.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;步步深入：MySQL 架構總覽 -&amp;gt; 查詢執行流程 -&amp;gt; SQL 解析順序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://allaboutdataanalysis.medium.com/%e5%a6%82%e4%bd%95%e9%81%bf%e5%85%8d%e5%88%86%e6%9e%90%e5%85%a9%e5%88%86%e9%90%98-%e9%81%8b%e8%a1%8c%e5%85%a9%e5%b0%8f%e6%99%82-%e9%80%99%e6%98%af%e4%b8%80%e4%bb%bdsql%e5%84%aa%e5%8c%96%e5%a4%a7%e5%85%a8-49e6c36f2b5f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何避免分析兩分鐘，運行兩小時？這是一份 SQL 優化大全&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
