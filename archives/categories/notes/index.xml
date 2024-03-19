@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Notes on Pei-Yu Chen (Sophia)</title>
+        <link>https://peifish1124.github.io/categories/notes/</link>
+        <description>Recent content in Notes on Pei-Yu Chen (Sophia)</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Peifish</copyright>
+        <lastBuildDate>Sun, 25 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://peifish1124.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OOP</title>
+        <link>https://peifish1124.github.io/p/study-oop/</link>
+        <pubDate>Sun, 25 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/study-oop/</guid>
+        <description>&lt;h3 id=&#34;encapsulation-封裝&#34;&gt;Encapsulation 封裝&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;使用者不需要知道背後的實作內容，只需要知道 method 提供的介面怎麼使用就好&lt;/li&gt;
+&lt;li&gt;像是一個 class 可能有 private method，自己內部去操作，別人不會知道這個 method&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;inheritance-繼承&#34;&gt;Inheritance 繼承&lt;/h3&gt;
+&lt;p&gt;假如現在有一個 class Cat&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Cat&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Shout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;我的名字叫做&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;喵&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果你想新增另一個 class Dog，功能和 Cat 差不多，你可以選擇去複製一模一樣的程式碼，只是 code 就重複了，不是好的寫法。
+因此可以宣告一個 Animal 的 parent class，並把原本 private 改成 protected，讓 Cat &amp;amp; Dog 都去繼承這個 parent class。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;private: 只有該 class 可以 access&lt;/li&gt;
+&lt;li&gt;protected: 只有該 class 跟他的 child class 可以 access&lt;/li&gt;
+&lt;li&gt;public: 任何人都可以 access&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;polymorphism-多型&#34;&gt;Polymorphism 多型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;多載（Overloading）: 根據參數的個數和類型來決定使用哪一個方法&lt;/li&gt;
+&lt;li&gt;複寫（Overriding）: parent class 建立一個 virtual method，讓 children class override&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;abstract-class-vs-interface&#34;&gt;Abstract class vs. Interface:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Abstract: 定義存在的東西、角色 (不可以被 new 出來的 class)&lt;/li&gt;
+&lt;li&gt;Interface: 定義行為&lt;/li&gt;
+&lt;li&gt;舉例：看似不相關的東西，例如鳥跟竹蜻蜓，可能就不適合用 abstract，因為他們沒有共通的 property，一個是物品，一個是動物，但可以用 interface，因為共同行為是 fly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;abstract-method-vs-virtual-method&#34;&gt;Abstract method vs. Virtual method:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;abstract: 代表是抽象的，不會去寫一些共同的行為
+&lt;ul&gt;
+&lt;li&gt;會希望一定要去 override 他，在 compile time 中如果沒有去 override 可能就會報錯。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;virtual: 可以寫一些共同行為，其他人看要不要 override
+&lt;ul&gt;
+&lt;li&gt;沒有 override 不會報錯，因為 virtual 可以定義共同的行為。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;generic&#34;&gt;Generic&lt;/h3&gt;
+&lt;p&gt;可以使用 Template 的方式在定義 method 或是 class 時不先宣告特定 type，而是用 T 代替。如此即能夠非常彈性地設計一個能夠接受不同 type 的 class。使用 Generic 可以將 class 定義成下面的樣子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;GenericList&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;c1&#34;&gt;// Add implementation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// other methods...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 接著就可以透過 Generic 接收不同 type 並實作 List&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numbers&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GenericList&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;numbers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 這時 compiler 就會自動提示說要 input int value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;books&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GenericList&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;books&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>MySQL 基本架構和查詢流程</title>
+        <link>https://peifish1124.github.io/p/study-mysql/</link>
+        <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/study-mysql/</guid>
+        <description>&lt;p&gt;資料庫管理系統（DBMS）是一種用於建立、維護和管理資料庫的軟體工具。它允許使用者操作資料庫，因此在日常使用中，當我們談論資料庫時，通常指的就是 DBMS，例如 MySQL。&lt;/p&gt;
+&lt;h3 id=&#34;mysql-基本架構&#34;&gt;MySQL 基本架構&lt;/h3&gt;
+&lt;img src=&#34;mysql-structure.png&#34; style=&#34;width: 900px; height: 600px;&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;圖片來自：https://iter01.com/581014.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;外掛式的儲存引擎架構將查詢處理和其它的系統任務以及資料的儲存提取相分離。這種架構允許根據業務需求和實際情況選擇合適的存儲引擎。&lt;/p&gt;
+&lt;h4 id=&#34;1-連線層-connection-layer&#34;&gt;1. 連線層 Connection Layer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;通訊機制：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;包括本地 socket 通訊 和 基於 client &amp;amp; server 端架構實現的 TCP/IP 的通訊方式。&lt;/li&gt;
+&lt;li&gt;本地 socket 通訊：可能同一台電腦或同一個 domain 的兩個應用程式之間的數據交換。&lt;/li&gt;
+&lt;li&gt;主要是想 &lt;code&gt;確保數據能夠在不同的系統之間有效地傳輸&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;連線管理：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;主要負責 &lt;code&gt;處理連線的建立、維護和斷開&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;也包括授權認證和相關的安全機制，確保只有經過授權的用戶才能夠訪問系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thread Pool：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;引入 thread pool 的概念，為通過認證且安全接入的客戶端分配 thread，來提高處理請求的速度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全連接：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;該層可以實現基於 SSL 的安全連接，確保數據在傳輸過程中的加密和完整性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;權限驗證：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;伺服器會 &lt;code&gt;為每個安全接入的客戶端驗證其操作權限&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;「連線管理」的「授權」：確定只有經過授權的用戶才能夠訪問系統。&lt;/li&gt;
+&lt;li&gt;「權限驗證」：則是 server 會為每個安全接入的客戶端驗證他的操作權限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-服務層-service-layer&#34;&gt;2. 服務層 Service Layer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;主要負責執行大多數核心服務功能。&lt;/li&gt;
+&lt;li&gt;伺服器會 &lt;code&gt;解析 SQL 查詢語句，建立內部的解析樹，並對其進行優化&lt;/code&gt;，例如決定查詢表的順序，判斷是否使用索引等，最終生成相應的執行計劃。
+&lt;ul&gt;
+&lt;li&gt;解析樹可以想像成它會將語句分解成不同的元件，如 SELECT、FROM、WHERE 等，並將它們組織成一個樹狀結構&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;SQL 接口(SQL interface)：
+&lt;ol&gt;
+&lt;li&gt;像是 MySQL 的大門，負責接收使用者的 SQL 指令並返回所需的查詢結果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;解析器(Parser)：
+&lt;ol&gt;
+&lt;li&gt;負責驗證和解析傳遞到解析器的 SQL 指令。&lt;/li&gt;
+&lt;li&gt;確保 SQL 語句的語法正確，並將其轉換成為 MySQL 可以理解的內部格式。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;優化器(Optimizer)：
+&lt;ol&gt;
+&lt;li&gt;在查詢執行前，使用查詢優化器對 SQL 語句進行優化，如根據 where 條件決定執行順序，例如先進行過濾還是先進行投影。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;快取與緩衝區(Caches &amp;amp; Buffers)：
+&lt;ul&gt;
+&lt;li&gt;如果查詢快取中有匹配的結果，查詢語句可以直接從查詢快取中獲取數據。&lt;/li&gt;
+&lt;li&gt;這種快取機制由多個小型快取組成，例如表快取、記錄快取、鍵快取、權限快取等。
+&lt;ul&gt;
+&lt;li&gt;表快取：快取表的結構信息&lt;/li&gt;
+&lt;li&gt;紀錄快取：快取表中的 row&lt;/li&gt;
+&lt;li&gt;鍵快取：快取 index&lt;/li&gt;
+&lt;li&gt;權限快取：快取用戶權限信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;3-儲存引擎層-storage-engine-layer&#34;&gt;3. 儲存引擎層 Storage Engine Layer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;負責資料的邏輯儲存和提取&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;MySQL 是採用外掛式可替換的儲存引擎架構，將前面兩層所說的查詢處理 和 資料的儲存提取相分離，不同的儲存引擎支援不同的功能，可以根據業務需求和實際需要來選擇合適的儲存引擎。&lt;/li&gt;
+&lt;li&gt;MySQL server 是透過一套統一的 API 與不同的儲存引擎進行溝通，讓上層的應用不需要關心底層資料是如何儲存和管理的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4-資料儲存層-data-storage-layer&#34;&gt;4. 資料儲存層 Data Storage Layer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;負責將資料實際存儲到磁碟上&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;主要將數據存儲在裸設備上運行的文件系統中，並實現與存儲引擎的互動。&lt;/li&gt;
+&lt;li&gt;依賴於底層的檔案系統來管理磁碟上的資料塊，並提供給上層的儲存引擎所需的讀寫操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mysql-查詢流程&#34;&gt;MySQL 查詢流程&lt;/h3&gt;
+&lt;img src=&#34;mysql-search.png&#34; style=&#34;width: 900px; height: 600px;&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;圖片來自：https://iter01.com/581014.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;客戶端向 MySQL 伺服器發送查詢請求（這其中包括 請求進入 thread pool → 授權檢查 → 分配 thread）。&lt;/li&gt;
+&lt;li&gt;伺服器首先檢查查詢快取，如果命中快取，則直接返回快取中的結果（同時進行權限檢查）。如果沒有命中快取，則進入下一階段。&lt;/li&gt;
+&lt;li&gt;伺服器對 SQL 進行解析和預處理（包括處理解析器無法解決的語義問題和權限檢查），然後由優化器生成相應的執行計劃。&lt;/li&gt;
+&lt;li&gt;MySQL 根據執行計劃，調用存儲引擎的 API 來執行查詢。&lt;/li&gt;
+&lt;li&gt;將查詢結果返回給客戶端，並將查詢結果存入快取。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;參考文章&#34;&gt;參考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://iter01.com/581014.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MySQL 的架構&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/annsshadow/p/5037667.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;步步深入：MySQL 架構總覽 -&amp;gt; 查詢執行流程 -&amp;gt; SQL 解析順序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://allaboutdataanalysis.medium.com/%e5%a6%82%e4%bd%95%e9%81%bf%e5%85%8d%e5%88%86%e6%9e%90%e5%85%a9%e5%88%86%e9%90%98-%e9%81%8b%e8%a1%8c%e5%85%a9%e5%b0%8f%e6%99%82-%e9%80%99%e6%98%af%e4%b8%80%e4%bb%bdsql%e5%84%aa%e5%8c%96%e5%a4%a7%e5%85%a8-49e6c36f2b5f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何避免分析兩分鐘，運行兩小時？這是一份 SQL 優化大全&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

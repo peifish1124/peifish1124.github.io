@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Node.js on Pei-Yu Chen (Sophia)</title>
+        <link>https://peifish1124.github.io/tags/node.js/</link>
+        <description>Recent content in Node.js on Pei-Yu Chen (Sophia)</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Peifish</copyright>
+        <lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://peifish1124.github.io/tags/node.js/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Pathfinder</title>
+        <link>https://peifish1124.github.io/p/project-pathfinder/</link>
+        <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/project-pathfinder/</guid>
+        <description>&lt;img src="https://peifish1124.github.io/p/project-pathfinder/pathfinder-pic.png" alt="Featured image of post Pathfinder" /&gt;&lt;p&gt;&lt;img src=&#34;github.png&#34; alt=&#34;alt text&#34; style=&#34;width: 20px; height: 20px; margin-bottom: -3px&#34;&gt; : &lt;a class=&#34;link&#34; href=&#34;https://github.com/peifish1124/Pathfinder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/peifish1124/Pathfinder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;因應教育部的 108 新課綱，我們推出探索生涯方向的 APP - Pathfinder ，從一開始的現行方案分析、接續經過三階段需求確認與測試的市場調查，最後聚焦於創造出一個專屬於高中生學習歷程、生涯探索的 App。立基於 ColleGo! 網站資料上，Pathfinder 串接三大功能：紀錄面板、儀表分析板、探索活動板，以個人化推薦、整合性的功能為關鍵特色，旨在為使用者打造個別專屬的生涯探索之旅。&lt;/p&gt;
+&lt;p&gt;在 APP 中我們採用文字探勘技術，協助高中生透過日常紀錄挖掘自我興趣與能力，而在過程中我們並非只著重在資訊技術上的精進，我們使用敏捷開發、階段式的做使用者調查訪問、與教育機構合作、規劃短中長期的發展模式等。&lt;/p&gt;
+&lt;h3 id=&#34;系統架構圖&#34;&gt;系統架構圖&lt;/h3&gt;
+&lt;img src=&#34;tech.png&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;前端：React Native&lt;/li&gt;
+&lt;li&gt;後端：GraphQL&lt;/li&gt;
+&lt;li&gt;部署：Heroku&lt;/li&gt;
+&lt;li&gt;資料庫：非關聯式資料庫 mongoDB&lt;/li&gt;
+&lt;li&gt;照片儲存：AWS S3&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

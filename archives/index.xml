@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pei-Yu Chen (Sophia)</title>
+        <link>https://peifish1124.github.io/</link>
+        <description>Recent content on Pei-Yu Chen (Sophia)</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Peifish</copyright>
+        <lastBuildDate>Sun, 25 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://peifish1124.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OOP</title>
+        <link>https://peifish1124.github.io/p/study-oop/</link>
+        <pubDate>Sun, 25 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/study-oop/</guid>
+        <description>&lt;h3 id=&#34;encapsulation-封裝&#34;&gt;Encapsulation 封裝&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;使用者不需要知道背後的實作內容，只需要知道 method 提供的介面怎麼使用就好&lt;/li&gt;
+&lt;li&gt;像是一個 class 可能有 private method，自己內部去操作，別人不會知道這個 method&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;inheritance-繼承&#34;&gt;Inheritance 繼承&lt;/h3&gt;
+&lt;p&gt;假如現在有一個 class Cat&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Cat&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Shout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;我的名字叫做&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;喵&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果你想新增另一個 class Dog，功能和 Cat 差不多，你可以選擇去複製一模一樣的程式碼，只是 code 就重複了，不是好的寫法。
+因此可以宣告一個 Animal 的 parent class，並把原本 private 改成 protected，讓 Cat &amp;amp; Dog 都去繼承這個 parent class。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;private: 只有該 class 可以 access&lt;/li&gt;
+&lt;li&gt;protected: 只有該 class 跟他的 child class 可以 access&lt;/li&gt;
+&lt;li&gt;public: 任何人都可以 access&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;polymorphism-多型&#34;&gt;Polymorphism 多型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;多載（Overloading）: 根據參數的個數和類型來決定使用哪一個方法&lt;/li&gt;
+&lt;li&gt;複寫（Overriding）: parent class 建立一個 virtual method，讓 children class override&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;abstract-class-vs-interface&#34;&gt;Abstract class vs. Interface:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Abstract: 定義存在的東西、角色 (不可以被 new 出來的 class)&lt;/li&gt;
+&lt;li&gt;Interface: 定義行為&lt;/li&gt;
+&lt;li&gt;舉例：看似不相關的東西，例如鳥跟竹蜻蜓，可能就不適合用 abstract，因為他們沒有共通的 property，一個是物品，一個是動物，但可以用 interface，因為共同行為是 fly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;abstract-method-vs-virtual-method&#34;&gt;Abstract method vs. Virtual method:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;abstract: 代表是抽象的，不會去寫一些共同的行為
+&lt;ul&gt;
+&lt;li&gt;會希望一定要去 override 他，在 compile time 中如果沒有去 override 可能就會報錯。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;virtual: 可以寫一些共同行為，其他人看要不要 override
+&lt;ul&gt;
+&lt;li&gt;沒有 override 不會報錯，因為 virtual 可以定義共同的行為。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;generic&#34;&gt;Generic&lt;/h3&gt;
+&lt;p&gt;可以使用 Template 的方式在定義 method 或是 class 時不先宣告特定 type，而是用 T 代替。如此即能夠非常彈性地設計一個能夠接受不同 type 的 class。使用 Generic 可以將 class 定義成下面的樣子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-C#&#34; data-lang=&#34;C#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;GenericList&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;c1&#34;&gt;// Add implementation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// other methods...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 接著就可以透過 Generic 接收不同 type 並實作 List&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numbers&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GenericList&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;numbers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 這時 compiler 就會自動提示說要 input int value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;books&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GenericList&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;books&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>About Me</title>
+        <link>https://peifish1124.github.io/about-me/</link>
+        <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/about-me/</guid>
+        <description>&lt;h3 id=&#34;學歷&#34;&gt;學歷&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sep 2023 – Jun 2025： 國立台灣大學 資訊工程研究所 - 網路探勘與資訊檢索實驗室&lt;/li&gt;
+&lt;li&gt;Jan 2023 - Jun 2023： 瑞典林雪平大學 交換計畫&lt;/li&gt;
+&lt;li&gt;Sep 2019 – Jun 2023： 國立台灣大學 資訊管理學系 (GPA: 4.16/4.3)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;工作經歷&#34;&gt;工作經歷&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Jul 2023 – Aug 2023：Backend Trainee @AppWorks School Campus Program&lt;/li&gt;
+&lt;li&gt;Apr 2022 – Dec 2022：Full Stack Engineer Intern @5xRuby&lt;/li&gt;
+&lt;li&gt;May 2021 – Mar 2022： Backend Engineer Intern @Beyonde, Inc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;軟體開發能力&#34;&gt;軟體開發能力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;熟悉 Nginx、Redis、Docker、GitHub Actions、CICD&lt;/li&gt;
+&lt;li&gt;曾使用過 AWS 服務：EC2、RDS、load balancer、auto-scaling&lt;/li&gt;
+&lt;li&gt;使用 Redis 設計 rate limiter 來保障網站安全&lt;/li&gt;
+&lt;li&gt;串接各種開源 API，例如 LINE messaging API、ChatGPT OpenAI、中央氣象局 API、Google Search API&lt;/li&gt;
+&lt;li&gt;多次設計資料庫、SQL Query、撰寫 API 文件、撰寫 testing&lt;/li&gt;
+&lt;li&gt;使用 scrum 敏捷開發、具 clean code 撰寫能力&lt;/li&gt;
+&lt;li&gt;ML/AI 模型建構和訓練能力&lt;/li&gt;
+&lt;li&gt;網路爬蟲能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;溝通交流軟實力&#34;&gt;溝通交流軟實力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;曾到瑞典交換生活半年，擅長與人溝通交流和面對各式挑戰&lt;/li&gt;
+&lt;li&gt;大學期間多次擔任系上活動的負責人，具有團隊合作和領導能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;技能&#34;&gt;技能&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Languages:&lt;/code&gt; Chinese (Native), English (Fluent)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Programming Language:&lt;/code&gt; C++, Python, Html, CSS, JavaScript&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Frameworks:&lt;/code&gt; React.js, Express.js, Ruby on Rails&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Databases:&lt;/code&gt; MySQL, PostgreSQL, MongoDB&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Clean Architecture:&lt;/code&gt; Separation of Concerns, Dependency Injection&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Automation Tools:&lt;/code&gt; GitHub Actions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL 基本架構和查詢流程</title>
+        <link>https://peifish1124.github.io/p/study-mysql/</link>
+        <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/study-mysql/</guid>
+        <description>&lt;p&gt;資料庫管理系統（DBMS）是一種用於建立、維護和管理資料庫的軟體工具。它允許使用者操作資料庫，因此在日常使用中，當我們談論資料庫時，通常指的就是 DBMS，例如 MySQL。&lt;/p&gt;
+&lt;h3 id=&#34;mysql-基本架構&#34;&gt;MySQL 基本架構&lt;/h3&gt;
+&lt;img src=&#34;mysql-structure.png&#34; style=&#34;width: 900px; height: 600px;&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;圖片來自：https://iter01.com/581014.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;外掛式的儲存引擎架構將查詢處理和其它的系統任務以及資料的儲存提取相分離。這種架構允許根據業務需求和實際情況選擇合適的存儲引擎。&lt;/p&gt;
+&lt;h4 id=&#34;1-連線層-connection-layer&#34;&gt;1. 連線層 Connection Layer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;通訊機制：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;包括本地 socket 通訊 和 基於 client &amp;amp; server 端架構實現的 TCP/IP 的通訊方式。&lt;/li&gt;
+&lt;li&gt;本地 socket 通訊：可能同一台電腦或同一個 domain 的兩個應用程式之間的數據交換。&lt;/li&gt;
+&lt;li&gt;主要是想 &lt;code&gt;確保數據能夠在不同的系統之間有效地傳輸&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;連線管理：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;主要負責 &lt;code&gt;處理連線的建立、維護和斷開&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;也包括授權認證和相關的安全機制，確保只有經過授權的用戶才能夠訪問系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thread Pool：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;引入 thread pool 的概念，為通過認證且安全接入的客戶端分配 thread，來提高處理請求的速度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全連接：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;該層可以實現基於 SSL 的安全連接，確保數據在傳輸過程中的加密和完整性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;權限驗證：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;伺服器會 &lt;code&gt;為每個安全接入的客戶端驗證其操作權限&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;「連線管理」的「授權」：確定只有經過授權的用戶才能夠訪問系統。&lt;/li&gt;
+&lt;li&gt;「權限驗證」：則是 server 會為每個安全接入的客戶端驗證他的操作權限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-服務層-service-layer&#34;&gt;2. 服務層 Service Layer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;主要負責執行大多數核心服務功能。&lt;/li&gt;
+&lt;li&gt;伺服器會 &lt;code&gt;解析 SQL 查詢語句，建立內部的解析樹，並對其進行優化&lt;/code&gt;，例如決定查詢表的順序，判斷是否使用索引等，最終生成相應的執行計劃。
+&lt;ul&gt;
+&lt;li&gt;解析樹可以想像成它會將語句分解成不同的元件，如 SELECT、FROM、WHERE 等，並將它們組織成一個樹狀結構&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;SQL 接口(SQL interface)：
+&lt;ol&gt;
+&lt;li&gt;像是 MySQL 的大門，負責接收使用者的 SQL 指令並返回所需的查詢結果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;解析器(Parser)：
+&lt;ol&gt;
+&lt;li&gt;負責驗證和解析傳遞到解析器的 SQL 指令。&lt;/li&gt;
+&lt;li&gt;確保 SQL 語句的語法正確，並將其轉換成為 MySQL 可以理解的內部格式。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;優化器(Optimizer)：
+&lt;ol&gt;
+&lt;li&gt;在查詢執行前，使用查詢優化器對 SQL 語句進行優化，如根據 where 條件決定執行順序，例如先進行過濾還是先進行投影。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;快取與緩衝區(Caches &amp;amp; Buffers)：
+&lt;ul&gt;
+&lt;li&gt;如果查詢快取中有匹配的結果，查詢語句可以直接從查詢快取中獲取數據。&lt;/li&gt;
+&lt;li&gt;這種快取機制由多個小型快取組成，例如表快取、記錄快取、鍵快取、權限快取等。
+&lt;ul&gt;
+&lt;li&gt;表快取：快取表的結構信息&lt;/li&gt;
+&lt;li&gt;紀錄快取：快取表中的 row&lt;/li&gt;
+&lt;li&gt;鍵快取：快取 index&lt;/li&gt;
+&lt;li&gt;權限快取：快取用戶權限信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;3-儲存引擎層-storage-engine-layer&#34;&gt;3. 儲存引擎層 Storage Engine Layer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;負責資料的邏輯儲存和提取&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;MySQL 是採用外掛式可替換的儲存引擎架構，將前面兩層所說的查詢處理 和 資料的儲存提取相分離，不同的儲存引擎支援不同的功能，可以根據業務需求和實際需要來選擇合適的儲存引擎。&lt;/li&gt;
+&lt;li&gt;MySQL server 是透過一套統一的 API 與不同的儲存引擎進行溝通，讓上層的應用不需要關心底層資料是如何儲存和管理的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4-資料儲存層-data-storage-layer&#34;&gt;4. 資料儲存層 Data Storage Layer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;負責將資料實際存儲到磁碟上&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;主要將數據存儲在裸設備上運行的文件系統中，並實現與存儲引擎的互動。&lt;/li&gt;
+&lt;li&gt;依賴於底層的檔案系統來管理磁碟上的資料塊，並提供給上層的儲存引擎所需的讀寫操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mysql-查詢流程&#34;&gt;MySQL 查詢流程&lt;/h3&gt;
+&lt;img src=&#34;mysql-search.png&#34; style=&#34;width: 900px; height: 600px;&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;圖片來自：https://iter01.com/581014.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;客戶端向 MySQL 伺服器發送查詢請求（這其中包括 請求進入 thread pool → 授權檢查 → 分配 thread）。&lt;/li&gt;
+&lt;li&gt;伺服器首先檢查查詢快取，如果命中快取，則直接返回快取中的結果（同時進行權限檢查）。如果沒有命中快取，則進入下一階段。&lt;/li&gt;
+&lt;li&gt;伺服器對 SQL 進行解析和預處理（包括處理解析器無法解決的語義問題和權限檢查），然後由優化器生成相應的執行計劃。&lt;/li&gt;
+&lt;li&gt;MySQL 根據執行計劃，調用存儲引擎的 API 來執行查詢。&lt;/li&gt;
+&lt;li&gt;將查詢結果返回給客戶端，並將查詢結果存入快取。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;參考文章&#34;&gt;參考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://iter01.com/581014.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MySQL 的架構&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/annsshadow/p/5037667.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;步步深入：MySQL 架構總覽 -&amp;gt; 查詢執行流程 -&amp;gt; SQL 解析順序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://allaboutdataanalysis.medium.com/%e5%a6%82%e4%bd%95%e9%81%bf%e5%85%8d%e5%88%86%e6%9e%90%e5%85%a9%e5%88%86%e9%90%98-%e9%81%8b%e8%a1%8c%e5%85%a9%e5%b0%8f%e6%99%82-%e9%80%99%e6%98%af%e4%b8%80%e4%bb%bdsql%e5%84%aa%e5%8c%96%e5%a4%a7%e5%85%a8-49e6c36f2b5f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何避免分析兩分鐘，運行兩小時？這是一份 SQL 優化大全&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>ChiTou</title>
+        <link>https://peifish1124.github.io/p/project-chitou/</link>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/project-chitou/</guid>
+        <description>&lt;img src="https://peifish1124.github.io/p/project-chitou/chitou-pic.png" alt="Featured image of post ChiTou" /&gt;&lt;p&gt;&lt;img src=&#34;github.png&#34; alt=&#34;alt text&#34; style=&#34;width: 20px; height: 20px; margin-bottom: -3px&#34;&gt; : &lt;a class=&#34;link&#34; href=&#34;https://github.com/peifish1124/ChiTou&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/peifish1124/ChiTou&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;後端技術架構&#34;&gt;後端技術架構&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Express.js、Nginx&lt;/li&gt;
+&lt;li&gt;APIs: 中央氣象局開放資料 API、LINE Bot Messaging API、Google Search API、ChatGPT OpenAI&lt;/li&gt;
+&lt;li&gt;Deploy: AWS EC2&lt;/li&gt;
+&lt;li&gt;Database: AWS RDS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;發想動機&#34;&gt;發想動機&lt;/h3&gt;
+&lt;p&gt;希望解決使用者在安排出遊的時候會遇到的問題：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;懶得用編輯程式、共編規劃行程&lt;/li&gt;
+&lt;li&gt;要開多個平台去整合各種資訊：用 Google docs 來紀錄、用 Google search 來查景點、用 Google map 來查景點間的距離、查詢天氣&lt;/li&gt;
+&lt;li&gt;提出了多種方案但不知道大家想選哪個行程&lt;/li&gt;
+&lt;li&gt;需要預估交通時間、停留時間&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此我們 ChiTou 的核心概念就是：整合共編、Google Search、Google Map、天氣資訊 的平台，節省使用者在安排旅行所需要的時間，並提供包含旅程所需時間的最終規劃結果&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Canchu</title>
+        <link>https://peifish1124.github.io/p/project-canchu/</link>
+        <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/project-canchu/</guid>
+        <description>&lt;h3 id=&#34;後端技術架構&#34;&gt;後端技術架構&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;後端： Express.js&lt;/li&gt;
+&lt;li&gt;AWS Cloud Service：AWS EC2、AWS RDS(MySQL)、AWS Load Balancer&lt;/li&gt;
+&lt;li&gt;容器化工具：Docker&lt;/li&gt;
+&lt;li&gt;CICD： GitHub Actions&lt;/li&gt;
+&lt;li&gt;測試： Jest&lt;/li&gt;
+&lt;li&gt;壓力測試：K6&lt;/li&gt;
+&lt;li&gt;Cache、Rate Limiter：Redis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;基本實作&#34;&gt;基本實作&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用 middleware 的方式實作 JWT 驗證使用者身份&lt;/li&gt;
+&lt;li&gt;大頭貼部分是用 middleware 的方式透過 multer 來實作&lt;/li&gt;
+&lt;li&gt;利用 cursor pagination 處理分頁&lt;/li&gt;
+&lt;li&gt;使用 Redis 作為快取，以加速資料取得，並且作為 rate limiter，用 IP 來判斷使用者是否在一定時間內超過次數的進入網站&lt;/li&gt;
+&lt;li&gt;前後端串接時申請 SSL 並處理 CORS 問題&lt;/li&gt;
+&lt;li&gt;透過 Nginx 處理 Http/Https 的請求導向&lt;/li&gt;
+&lt;li&gt;使用 Docker Container 執行 MySQL、Nginx、Redis &amp;amp; Express 程式（Canchu）&lt;/li&gt;
+&lt;li&gt;透過 GitHub Actions 實作 CI/CD 完成自動化測試與部署至 Docker&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Pathfinder</title>
+        <link>https://peifish1124.github.io/p/project-pathfinder/</link>
+        <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/p/project-pathfinder/</guid>
+        <description>&lt;img src="https://peifish1124.github.io/p/project-pathfinder/pathfinder-pic.png" alt="Featured image of post Pathfinder" /&gt;&lt;p&gt;&lt;img src=&#34;github.png&#34; alt=&#34;alt text&#34; style=&#34;width: 20px; height: 20px; margin-bottom: -3px&#34;&gt; : &lt;a class=&#34;link&#34; href=&#34;https://github.com/peifish1124/Pathfinder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/peifish1124/Pathfinder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;因應教育部的 108 新課綱，我們推出探索生涯方向的 APP - Pathfinder ，從一開始的現行方案分析、接續經過三階段需求確認與測試的市場調查，最後聚焦於創造出一個專屬於高中生學習歷程、生涯探索的 App。立基於 ColleGo! 網站資料上，Pathfinder 串接三大功能：紀錄面板、儀表分析板、探索活動板，以個人化推薦、整合性的功能為關鍵特色，旨在為使用者打造個別專屬的生涯探索之旅。&lt;/p&gt;
+&lt;p&gt;在 APP 中我們採用文字探勘技術，協助高中生透過日常紀錄挖掘自我興趣與能力，而在過程中我們並非只著重在資訊技術上的精進，我們使用敏捷開發、階段式的做使用者調查訪問、與教育機構合作、規劃短中長期的發展模式等。&lt;/p&gt;
+&lt;h3 id=&#34;系統架構圖&#34;&gt;系統架構圖&lt;/h3&gt;
+&lt;img src=&#34;tech.png&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;前端：React Native&lt;/li&gt;
+&lt;li&gt;後端：GraphQL&lt;/li&gt;
+&lt;li&gt;部署：Heroku&lt;/li&gt;
+&lt;li&gt;資料庫：非關聯式資料庫 mongoDB&lt;/li&gt;
+&lt;li&gt;照片儲存：AWS S3&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://peifish1124.github.io/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>https://peifish1124.github.io/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://peifish1124.github.io/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/links/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://peifish1124.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://peifish1124.github.io/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
