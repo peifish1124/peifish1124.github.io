@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=''>
-<title></title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='介紹 OOP 三大特性和 abstract, virtual, interface, generic 概念'>
+<title>OOP</title>
 
-<link rel='canonical' href='https://peifish1124.github.io/'>
+<link rel='canonical' href='https://peifish1124.github.io/p/study-oop/'>
 
-<link rel="stylesheet" href="/scss/style.min.2418ac62ac08402dceb93596ce91d090e3a1039303e1d69ad7a146a04e07457c.css"><meta property='og:title' content=''>
-<meta property='og:description' content=''>
-<meta property='og:url' content='https://peifish1124.github.io/'>
+<link rel="stylesheet" href="/scss/style.min.2418ac62ac08402dceb93596ce91d090e3a1039303e1d69ad7a146a04e07457c.css"><meta property='og:title' content='OOP'>
+<meta property='og:description' content='介紹 OOP 三大特性和 abstract, virtual, interface, generic 概念'>
+<meta property='og:url' content='https://peifish1124.github.io/p/study-oop/'>
 <meta property='og:site_name' content='Pei-Yu Chen (Sophia)'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' />
-<meta name="twitter:title" content="">
-<meta name="twitter:description" content="">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='OOP' /><meta property='article:published_time' content='2024-02-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-02-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="OOP">
+<meta name="twitter:description" content="介紹 OOP 三大特性和 abstract, virtual, interface, generic 概念">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -113,7 +113,7 @@
         
         
         
-        <li  class='current' >
+        <li >
             <a href='/' >
                 
                 
@@ -245,12 +245,24 @@
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/notes/" style="background-color: #589cbf; color: #fff;">
+                Notes
+            </a>
+        
+    </header>
+    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/"></a>
+            <a href="/p/study-oop/">OOP</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            介紹 OOP 三大特性和 abstract, virtual, interface, generic 概念
+        </h3>
         
     </div>
 
@@ -259,6 +271,19 @@
     
     
     <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 25, 2024</time>
+            </div>
         
 
         
@@ -272,7 +297,7 @@
 
 
                 <time class="article-time--reading">
-                    閱讀時間: 0 分鐘
+                    閱讀時間: 2 分鐘
                 </time>
             </div>
         
@@ -287,12 +312,125 @@
     <section class="article-content">
     
     
-    
+    <h3 id="encapsulation-封裝">Encapsulation 封裝</h3>
+<ol>
+<li>使用者不需要知道背後的實作內容，只需要知道 method 提供的介面怎麼使用就好</li>
+<li>像是一個 class 可能有 private method，自己內部去操作，別人不會知道這個 method</li>
+</ol>
+<h3 id="inheritance-繼承">Inheritance 繼承</h3>
+<p>假如現在有一個 class Cat</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Cat</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">private</span> <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="n">Cat</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="kt">string</span> <span class="n">Shout</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="s">&#34;我的名字叫做&#34;</span><span class="p">+</span><span class="n">name</span><span class="p">+</span><span class="s">&#34;喵&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果你想新增另一個 class Dog，功能和 Cat 差不多，你可以選擇去複製一模一樣的程式碼，只是 code 就重複了，不是好的寫法。
+因此可以宣告一個 Animal 的 parent class，並把原本 private 改成 protected，讓 Cat &amp; Dog 都去繼承這個 parent class。</p>
+<ul>
+<li>private: 只有該 class 可以 access</li>
+<li>protected: 只有該 class 跟他的 child class 可以 access</li>
+<li>public: 任何人都可以 access</li>
+</ul>
+<h3 id="polymorphism-多型">Polymorphism 多型</h3>
+<ul>
+<li>多載（Overloading）: 根據參數的個數和類型來決定使用哪一個方法</li>
+<li>複寫（Overriding）: parent class 建立一個 virtual method，讓 children class override</li>
+</ul>
+<hr>
+<h3 id="abstract-class-vs-interface">Abstract class vs. Interface:</h3>
+<ul>
+<li>Abstract: 定義存在的東西、角色 (不可以被 new 出來的 class)</li>
+<li>Interface: 定義行為</li>
+<li>舉例：看似不相關的東西，例如鳥跟竹蜻蜓，可能就不適合用 abstract，因為他們沒有共通的 property，一個是物品，一個是動物，但可以用 interface，因為共同行為是 fly</li>
+</ul>
+<h3 id="abstract-method-vs-virtual-method">Abstract method vs. Virtual method:</h3>
+<ul>
+<li>abstract: 代表是抽象的，不會去寫一些共同的行為
+<ul>
+<li>會希望一定要去 override 他，在 compile time 中如果沒有去 override 可能就會報錯。</li>
+</ul>
+</li>
+<li>virtual: 可以寫一些共同行為，其他人看要不要 override
+<ul>
+<li>沒有 override 不會報錯，因為 virtual 可以定義共同的行為。</li>
+</ul>
+</li>
+</ul>
+<h3 id="generic">Generic</h3>
+<p>可以使用 Template 的方式在定義 method 或是 class 時不先宣告特定 type，而是用 T 代替。如此即能夠非常彈性地設計一個能夠接受不同 type 的 class。使用 Generic 可以將 class 定義成下面的樣子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">GenericList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="k">void</span> <span class="n">Add</span><span class="p">(</span><span class="n">T</span> <span class="n">val</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// Add implementation</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// other methods...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 接著就可以透過 Generic 接收不同 type 並實作 List</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">numbers</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GenericList</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl"><span class="n">numbers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">5</span><span class="p">)</span> <span class="c1">// 這時 compiler 就會自動提示說要 input int value</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">books</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GenericList</span><span class="p">&lt;</span><span class="n">Book</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl"><span class="n">books</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">Book</span><span class="p">());</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/oop/">OOP</a>
+        
+    </section>
+
 
     </footer>
 
@@ -303,6 +441,28 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相關文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/study-mysql/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MySQL 基本架構和查詢流程</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
